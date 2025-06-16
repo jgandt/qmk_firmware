@@ -11,3 +11,18 @@ qmk flash sabine_jgandt.uf2
 
 # keyboard.json doc reference
 https://docs.qmk.fm/reference_info_json
+
+# setting keyboard hand
+This only has to be done once and you have done it for both sides already.
+You can now flash normally, but this remains as documentation.
+
+
+I choose to set the handedness in EEProm.
+That requires `#define EE_HANDS` in the config.h file
+
+
+You can flash the hand to the keyboard with:
+`qmk flash -kb sabine -km jgandt -bl uf2-split-left`
+
+or the right with 
+`qmk flash -kb sabine -km jgandt -bl uf2-split-right`
