@@ -33,6 +33,9 @@
     },
     "split": {
         "enabled": true,
+        "handedness": {
+            "pin": "GP29"
+        },
         "soft_serial_pin": "GP1",
         "serial": {
             "pin": "GP1",

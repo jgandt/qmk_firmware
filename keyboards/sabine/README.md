@@ -35,5 +35,13 @@ You can flash the hand to the keyboard with:
 or the right with 
 `qmk flash -kb sabine -km jgandt -bl uf2-split-right`
 
-## Instead, A3 is wired to GND on the right hand split
- The SPLIT_HAND_PIN is then defined as A3.
+## Instead, GP29 is wired to GND on the right hand split
+
+With RP2040 I think the default is pins are pulled low, which is unusual.
+
+So the GP29 right hand being wired to GND is maybe redundant.
+
+However to pull GP29 on the left hand high, we have to wire GP29 via 10kohm to 3.3v
+
+The SPLIT_HAND_PIN (split.handedness.pin) is then defined as GP29.
+
